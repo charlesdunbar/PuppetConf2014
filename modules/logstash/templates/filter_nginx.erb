@@ -1,0 +1,15 @@
+filter {
+  if [type] == "nginx" {
+      grok {
+        match => ['message', "%{COMBINEDAPACHELOG}"]
+      }
+      date {
+        match => ['timestamp', "dd/MMM/YYYY:HH:mm:ss Z"]
+      }
+      geoip {
+        source        => "clientip"
+        database      => "/etc/logstash/GeoLiteCity.dat"
+        remove_field  => [ "geoip.ip" ]
+      }
+    }
+}

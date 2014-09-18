@@ -1,0 +1,6 @@
+input {
+  file {
+      path => [ "/srv/log/*/syslog", "/srv/log/*/auth.log", "/srv/log/*/cron.log"]
+      type => "rsyslog"
+  }
+}

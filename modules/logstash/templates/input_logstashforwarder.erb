@@ -1,0 +1,7 @@
+input {
+    lumberjack {
+        port            =>  12000
+        ssl_key         => "/var/lib/puppet/ssl/private_keys/<%= @fqdn %>.pem"
+        ssl_certificate => "/var/lib/puppet/ssl/certs/<%= @fqdn %>.pem"
+    }
+}
