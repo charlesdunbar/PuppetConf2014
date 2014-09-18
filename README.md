@@ -1,5 +1,12 @@
 ###Steps used in the "Using Puppet to Stand Up Centralized Logging and Metrics" workshop at PuppetConf 2014
 
+####Part 0 - Prerequisites
+Tools needed for this demo are -
+
+1. git
+2. vagrant with virtual box
+
+
 ####Part 1 - Getting centralized logging
 
 1. Get this repo - `git clone https://github.com/charlesdunbar/PuppetConf2014`
@@ -61,9 +68,9 @@
 		exit
 		exit
 	
-2. Run puppet on client and elk (Run three times on client to handle dependency errors and a broken init script in the package) - 
+2. Run puppet on client and elk (Run two times on client to handle dependency errors and a broken init script in the package) - 
 
-		vagrant ssh elk -c "sudo puppet agent -t"; vagrant ssh client -c "sudo puppet agent -t"; vagrant ssh client -c "sudo puppet agent -t"; vagrant ssh client -c "sudo puppet agent -t"
+		vagrant ssh elk -c "sudo puppet agent -t"; vagrant ssh client -c "sudo puppet agent -t"; vagrant ssh client -c "sudo puppet agent -t"
 		
 3. Populate the log that logstash-forwarder is watching -
 

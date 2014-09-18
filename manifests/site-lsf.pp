@@ -84,7 +84,7 @@ node client {
   file { '/etc/init.d/logstash-forwarder':
     ensure  => file,
     content => template("logstashforwarder/logstash-forwarder.erb"),
-    require => Class['logstashforwarder']
+    notify  => Class['logstashforwarder']
   }
 
 }
