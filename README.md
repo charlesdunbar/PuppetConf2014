@@ -2,7 +2,7 @@
 
 ####Part 1 - Getting centralized logging
 
-1. Get this repo - `git clone charlesdunbar`
+1. Get this repo - `git clone https://github.com/charlesdunbar/PuppetConf2014`
 2. Initialize everything with `vagrant up`
 3. Install the modules being used:
  
